@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
+
+        body {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            background-color: rgb(24, 4, 18);
+            color: white;
+            text-align: center;
+            font-family: 'Nunito', Nunito, sans-serif;
+            overflow-y: hidden;
+            overflow-x: hidden;
+
+        }
+
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+                background: #000000;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        splash {
+            font-style: italic;
+            color: #ff009d;
+        }
+
+        title1 {
+            font-size: 30px;
+            margin-top: 5px;
+            color: #be229d;
+        }
+
+        .prevent-select {
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .page {
+            background-color: rgb(24, 4, 18);
+            color: white;
+            text-align: center;
+            font-family: 'Nunito', Nunito, sans-serif;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -100vw;
+            overflow-y: auto;
+            z-index: 0;
+        }
+
+
+
+
+        .page:target {
+            left: 0vw;
+            z-index: 1;
+        }
+
+        .sidebar {
+            margin: 0;
+            border-radius: 5px;
+            padding: 0;
+            width: 90px;
+            bottom:  300x;
+            background-color: #32143b;
+            overflow: fixed;
+            position: fixed;
+            transform: translateX(-69px);
+            transition: background-color 0.3s ease, transform 0.3s ease; 
+        }
+
+
+.sidebar:hover{
+    transform: translateX(0px);
+
+}
+        .button {
+            display: inline-block;
+            padding: 10px 4px;
+            margin: 3px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: #50133b00;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+
+        }
+        .button1 {
+            display: inline-block;
+            padding: 10px 4px;
+            margin: 3px;
+            font-size: 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            background-color: #50133b;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            cursor: pointer;
+
+        }
+        
+
+        .button1:active {
+            transform: scale(0.9);
+            background-color: #42024e;
+        }
+
+        .button:active {
+            transform: scale(0.9);
+            background-color: #000000;
+        }
+    </style>
+
+
+</head>
+
+<script>
+    window.onload = splashloader;
+
+    const phrases = [
+        "lexia powerup hack 2024",
+        "90% skidded 10% actual code",
+        "kys shibagt",
+        "i would not want to live here, it looks like the skibidi toilet",
+        "cats better than dogs",
+    ];
+
+
+
+    function splashloader() {
+            const randPhraseNum = Math.floor(Math.random() * phrases.length);
+            document.getElementById("splash").textContent = phrases[randPhraseNum];
+    }
+</script>
+
+<body>
+    <script src="particles.js"></script>
+    
+    <div class="prevent-select">
+        <title1>Acental Labs</title1>
+        
+        <div class="prevent-select">
+            <splash id="splash"></splash>
+            
+            <div class="sidebar">
+                <a class="button" href="#">Home</a>
+                <a class="button" href="#contact">Contact Us</a>
+                <a class="button" href="#tos">TOS</a>
+                <a class="button" href="#cool">Cool</a>
+            </div>
+            <div id="particles-js"></div>
+
+            <script>
+                particlesJS('particles-js', {
+                    "particles": {
+            "number": {
+              "value": 160,
+              "density": {
+                "enable": true,
+                "value_area": 800
+              }
+            },
+            "color": {
+              "value": "#ffffff"
+            },
+            "shape": {
+              "type": "circle",
+              "stroke": {
+                "width": 0,
+                "color": "#000000"
+              },
+              "polygon": {
+                "nb_sides": 5
+              },
+              "image": {
+                "src": "img/github.svg",
+                "width": 100,
+                "height": 100
+              }
+            },
+            "opacity": {
+              "value": 1,
+              "random": true,
+              "anim": {
+                "enable": true,
+                "speed": 1,
+                "opacity_min": 0,
+                "sync": false
+              }
+            },
+            "size": {
+              "value": 3,
+              "random": true,
+              "anim": {
+                "enable": false,
+                "speed": 4,
+                "size_min": 0.3,
+                "sync": false
+              }
+            },
+            "line_linked": {
+              "enable": false,
+              "distance": 150,
+              "color": "#ffffff",
+              "opacity": 0.4,
+              "width": 1
+            },
+            "move": {
+              "enable": true,
+              "speed": 1,
+              "direction": "none",
+              "random": true,
+              "straight": false,
+              "out_mode": "out",
+              "bounce": false,
+              "attract": {
+                "enable": false,
+                "rotateX": 600,
+                "rotateY": 600
+              }
+            }
+          },
+          "interactivity": {
+            "detect_on": "canvas",
+            "events": {
+              "onhover": {
+                "enable": true,
+                "mode": "bubble"
+              },
+              "onclick": {
+                "enable": true,
+                "mode": "push"
+              },
+              "resize": true
+            },
+            "modes": {
+              "grab": {
+                "distance": 400,
+                "line_linked": {
+                  "opacity": 1
+                }
+              },
+              "bubble": {
+                "distance": 100,
+                "size": 4,
+                "duration": 2,
+                "opacity": 0,
+                "speed": 3
+              },
+              "repulse": {
+                "distance": 100,
+                "duration": 0.4
+              },
+              "push": {
+                "particles_nb": 4
+              },
+              "remove": {
+                "particles_nb": 2
+              }
+            }
+          },
+          "retina_detect": true
+                });
+                
+            </script>
+
+
+
+            <div class="page" id="contact">
+                <title1>Acental Labs - Contact Us</title1>
+
+                    <div class="prevent-select">
+                        
+
+                        <div class="sidebar">
+                            <a class="button" href="#">Home</a>
+                            <a class="button" href="#contact">Contact Us</a>
+                            <a class="button" href="#tos">TOS</a>
+                            <a class="button" href="#cool">Cool</a>
+                        </div>
+
+                    
+                </div>
+
+                <div class="page" id="tos">
+                    <div class="prevent-select">
+                        <title1>Acental Labs - TOS</title1>
+                        <div class="sidebar">
+                            
+                            <a class="button" href="#">Home</a>
+                            <a class="button" href="#contact">Contact Us</a>
+                            <a class="button" href="#tos">TOS</a>
+                            <a class="button" href="#cool">Cool</a>
+                </div>                 
+
+                        
+                        
+                    
+                            <div class="page" id="cool">
+                                <div class="prevent-select">
+                                <title1>Acental Labs - Cool</title1>
+        
+                        <div class="sidebar">
+                            <a class="button" href="#">Home</a>
+                            <a class="button" href="#contact">Contact Us</a>
+                            <a class="button" href="#tos">TOS</a>
+                            <a class="button" href="#cool">Cool</a>
+                      
+                </div>       
+
+</body>
+
+</html>
